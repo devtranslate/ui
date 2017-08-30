@@ -29,7 +29,7 @@ Para acessar ao guia de contribuição basta [clicar aqui](https://github.com/de
 ## English
 
 ### About the project
-Created in march of 2017, the DEV#TRANSLATE have as main goal the organization, location and translation of technical files related about IT area translated for other languages. In this way, avoiding exclude a part of community from get knowledge or start in technology area. We list below a few problems which we are trying to resolve with the creation of this site:
+Created in march of 2017, the DEV#TRANSLATE has as main goal the organization, location and translation of technical files related about IT area translated for other languages. In this way, avoiding exclude a part of community from get knowledge or start in technology area. We list below a few problems which we are trying to resolve with the creation of this site:
 
 * **Easy location:** Because have so many translations of files all over the internet, sometimes becomes difficult to find any specific file between so many information.
 
