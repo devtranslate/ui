@@ -24,6 +24,9 @@ Criado em Março de 2017, o DEV#TRANSLATE tem como objetivo a organização,loca
 * **Habilidades:** Uma das vantagens de contribuir com traduções é a melhora de habilidade com línguas estrangeiras, e também com o conteúdo que esteja traduzindo.
 
 ### Contribuidores
+Para verificar quem contribui com o projeto basta [clicar aqui](https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md).
+
+### Contribuição
 Para acessar ao guia de contribuição basta [clicar aqui](https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md).
 
 ## English
@@ -38,4 +41,7 @@ Created in march of 2017, the DEV#TRANSLATE has as main goal the organization, l
 * **Skills:** One of the advantage to translate is the improvement of the skills with a foreign language, and also with the content of the translations.
 
 ### Contributors
+To verify who is contributing to the project, just [click here](https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md).
+
+### Contributing
 To access the contribute guide, just [click here](https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md).
