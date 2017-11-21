@@ -13,20 +13,9 @@
 # Contents
 1. [Finished Projects](https://github.com/devtranslate/about/blob/master/PROJECTS.md#verify-permission)
 2. [Projects in Progress](https://github.com/devtranslate/about/blob/master/PROJECTS.md#verify-permission)
-3. [Others](https://github.com/devtranslate/about/blob/master/PROJECTS.md#verify-permission)
-
 
 ## Finished Projects
 Soon.
 
 ## Projects in Progress
 Soon.
-
-## Others
-Soon.
-
-### Verify Permission
--
-
-### Has Permission to Translate
--
