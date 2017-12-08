@@ -17,7 +17,7 @@
 ## Portuguese
 
 ### Sobre o Projeto
-Criado em Março de 2017, o DEV#TRANSLATE tem como objetivo a organização,localização e tradução de documentos técnicos referentes à área de TI traduzidos para outras línguas. Desta forma evitando excluir uma parte da comunidade de adquirir conhecimento ou começar na área de tecnologia. Apresentamos abaixo alguns dos problemas que buscamos resolver com a criação deste site:
+Criado em Março de 2017, o DEV#TRANSLATE tem como objetivo a organização, localização e tradução de documentos técnicos referentes à área de TI traduzidos para outras línguas. Desta forma evitando excluir uma parte da comunidade de adquirir conhecimento ou começar na área de tecnologia. Apresentamos abaixo alguns dos problemas que buscamos resolver com a criação deste site:
 
 * **Fácil localização:** Por terem várias traduções de documentos de tecnologia espalhadas pela internet, às vezes se torna difícil encontrar algum documento específico em meio a tanta informação.
 * **Comunidade:** Uma forma das pessoas poderem contribuir com a comunidade. Desta forma elas podem encontrar os projetos de tradução que estão em andamento.
