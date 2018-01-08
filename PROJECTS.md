@@ -18,4 +18,7 @@
 Soon.
 
 ## Projects in Progress
-Soon.
+ * [HTML Reference](https://github.com/devtranslate/html-reference)
+ * [CSS Reference](https://github.com/devtranslate/css-reference)
+ * [Bulma](https://github.com/devtranslate/bulma)
+  
