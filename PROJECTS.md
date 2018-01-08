@@ -11,8 +11,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/devtranslate/about.svg?style=flat-square)](https://github.com/devtranslate/about/network)
 
 # Contents
-1. [Finished Projects](https://github.com/devtranslate/about/blob/master/PROJECTS.md#verify-permission)
-2. [Projects in Progress](https://github.com/devtranslate/about/blob/master/PROJECTS.md#verify-permission)
+1. [Finished Projects](https://github.com/devtranslate/about/blob/master/PROJECTS.md#finished-projects)
+2. [Projects in Progress](https://github.com/devtranslate/about/blob/master/PROJECTS.md#projects-in-progress)
 
 ## Finished Projects
 Soon.
