@@ -17,7 +17,9 @@
 ## Portuguese
 
 ### Sobre o Projeto
-Criado em Março de 2017, o DEV#TRANSLATE tem como objetivo a organização, localização e tradução de documentos técnicos referentes à área de TI traduzidos para outras línguas. Desta forma evitando excluir uma parte da comunidade de adquirir conhecimento ou começar na área de tecnologia. Apresentamos abaixo alguns dos problemas que buscamos resolver com a criação deste site:
+Criado em Março de 2017, o DEV#TRANSLATE tem como objetivo a organização, localização e tradução de documentos técnicos referentes à área de TI traduzidos para outras línguas. Desta forma evitando excluir uma parte da comunidade de adquirir conhecimento ou começar na área de tecnologia.
+
+Apresentamos abaixo alguns dos problemas que buscamos resolver com a criação deste site:
 
 * **Fácil localização:** Por terem várias traduções de documentos de tecnologia espalhadas pela internet, às vezes se torna difícil encontrar algum documento específico em meio a tanta informação.
 * **Comunidade:** Uma forma das pessoas poderem contribuir com a comunidade. Desta forma elas podem encontrar os projetos de tradução que estão em andamento.
@@ -32,13 +34,15 @@ Para acessar ao guia de contribuição basta [clicar aqui][link-contributing].
 ## English
 
 ### About the project
-Created in march of 2017, the DEV#TRANSLATE has as main goal the organization, location and translation of technical files related about IT area translated for other languages. In this way, avoiding exclude a part of community from get knowledge or start in technology area. We list below a few problems which we are trying to resolve with the creation of this site:
+Created on March 2017, the DEV#TRANSLATE has as main goal the curation, organization, and translation of technical files related to IT. In this sense, we try to avoid excluding a part of the community from getting knowledge or starting in the technology sector.
 
-* **Easy location:** Because have so many translations of files all over the internet, sometimes becomes difficult to find any specific file between so many information.
+We list a few problems which we are trying to resolve with the creation of this site:
 
-* **Community:** A way to people contribute with the community. On this way, they can find other translation projects which are being developed.
+* **An easy way to find:** Because there are so many translations scattered all over the Web, sometimes it becomes difficult to find any specific document among so many information.
 
-* **Skills:** One of the advantage to translate is the improvement of the skills with a foreign language, and also with the content of the translations.
+* **Community:** A way for people to contribute and find other translation projects being developed.
+
+* **Skills:** One of the advantages of the translation process is to improve your skills in a foreign language and to improve the comprehension of the content being translated.
 
 ### Contributors
 To verify who is contributing to the project, just [click here][link-contributors].
