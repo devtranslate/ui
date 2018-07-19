@@ -2,19 +2,16 @@
   <img src="https://raw.githubusercontent.com/devtranslate/devtranslate.github.io/master/images/logo.png" alt="Logo DevTranslate"/>
 </p>
 
-[![Join the chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-cc2b5e.svg?style=flat-square)](https://gitter.im/devtranslate/Lobby)
-[![Like the page on facebook](https://img.shields.io/badge/facebook-like%20the%20page%20%E2%86%92-4267b2.svg?style=flat-square)](https://www.facebook.com/devtranslate/)
-[![Join the chat](https://img.shields.io/badge/telegram-join%20chat%20%E2%86%92-0088cc.svg?style=flat-square)](https://telegram.me/devtranslate)
-[![Follow on medium](https://img.shields.io/badge/medium-follow%20us%20%E2%86%92-02b875.svg?style=flat-square)](https://medium.com/devtranslate)
-[![GitHub issues](https://img.shields.io/github/issues/devtranslate/about.svg?style=flat-square)](https://github.com/devtranslate/about/issues)
-[![GitHub stars](https://img.shields.io/github/stars/devtranslate/about.svg?style=flat-square)](https://github.com/devtranslate/about/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/devtranslate/about.svg?style=flat-square)](https://github.com/devtranslate/about/network)
+###### Social Media
+[![Telegram](https://static.filehorse.com/icons/messaging-and-chat/telegram-for-desktop-icon-32.png)](https://telegram.me/devtranslate)
+[![Facebook](https://www.vidaperfeita.com.br/imagens/facebook_icone.png)](https://www.facebook.com/devtranslate/)
+[![Medium](https://i.goldvoice.club/32x32a/https://images.golos.io/DQmdgFweCvegE8UD1DkKZNyCB1GfuzzjDVrmNZ9bHNy8SoW/%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%BE.png)](https://medium.com/devtranslate) 
 
 # Contents
 1. [Portuguese](https://github.com/devtranslate/about#portuguese)
 2. [English](https://github.com/devtranslate/about#english)
 
-## Portuguese
+# Portuguese
 
 ### Sobre o Projeto
 Criado em Março de 2017, o DEV#TRANSLATE tem como objetivo a organização, localização e tradução de documentos técnicos referentes à área de TI traduzidos para outras línguas. Desta forma evitando excluir uma parte da comunidade de adquirir conhecimento ou começar na área de tecnologia.
@@ -31,7 +28,7 @@ Para verificar quem contribui com o projeto basta [clicar aqui][link-contributor
 ### Contribuição
 Para acessar ao guia de contribuição basta [clicar aqui][link-contributing].
 
-## English
+# English
 
 ### About the project
 Created on March 2017, the DEV#TRANSLATE has as main goal the curation, organization, and translation of technical files related to IT. In this sense, we try to avoid excluding a part of the community from getting knowledge or starting in the technology sector.

@@ -6,7 +6,7 @@
 1. [Portuguese](https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md#portuguese)
 2. [English](https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md#english)
 
-## Portuguese
+# Portuguese
 
 ### Como Contribuir
 
@@ -39,5 +39,5 @@ Caso você opte pelos repositório, e ele já existir, basta ir nas issues e bus
 
 Mas caso você queira começar a tradução de um novo repositório que ainda não existente basta comentar na issue [Projects](https://github.com/devtranslate/about/issues/27), informando o repositório deseja realizar as traduções e iremos cria-lo para você.
 
-## English
+# English
 Soon.
