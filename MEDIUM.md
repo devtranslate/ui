@@ -52,5 +52,5 @@ To include a publication in our medium, it is enough to edit or publish your art
 ### Rules to Post
 When posting your translated content it's necessary that you use tags informing the language that is written, for example, if the content is in English create a tag called **#english**, or if it's in Portuguese create a tag called **#portuguese**. This is how we organize the translated content, this way it's faster and easier to locate what is needed.
 
-[link-issues]: https://github.com/devtranslate/medium/issues
-[link-permission]: https://github.com/devtranslate/medium/blob/master/PERMISSION.md
+[link-issues]: https://github.com/devtranslate/about/issues/26
+[link-permission]: https://github.com/devtranslate/about/blob/master/PERMISSION.md
