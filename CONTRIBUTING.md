@@ -11,7 +11,7 @@
 ### Como Contribuir
 
 #### Site & API
-Nestes repositórios você irá localizar o nosso site e api hospedados. Caso encontre algum problema, ou deseje adicionar algum conteúdo basta seguir o procedimento abaixo:
+Nestes repositórios estão hospedados o nosso site e api. Caso encontre algum problema, ou deseje adicionar algum conteúdo basta seguir o procedimento abaixo:
 
 * De um Fork no repositório
 
@@ -35,7 +35,7 @@ Atualmente existem duas opções para realizar traduções:
 * **Medium**: publicando artigos. Caso queira contribuir basta acessar o guia [clicando aqui](https://github.com/devtranslate/about/blob/master/MEDIUM.md).
 * **Repositórios**: realizando traduções maiores como de documentações, etc.
 
-Caso você opte pelos repositório, e ele já existir, basta ir nas issues e buscar por: **Translation Development** que terá todas as informações dos responsáveis pelos capítulos ou arquivos, o status da tradução, entre outras informações. Caso exista algum capítulo ou arquivo vago, basta informar nos comentários que deseja ele e começar a traduzir.
+Caso você opte pelos repositórios, e ele já exista, basta ir nas issues e buscar por: **Translation Development**. Esta issue terá todas as informações dos responsáveis pelos capítulos ou arquivos, o status da tradução, entre outras informações. Caso exista algum capítulo ou arquivo vago, basta informar nos comentários que deseja e começar a traduzir.
 
 Mas caso você queira começar a tradução de um novo repositório que ainda não existente basta comentar na issue [Projects](https://github.com/devtranslate/about/issues/27), informando o repositório deseja realizar as traduções e iremos cria-lo para você.
 
