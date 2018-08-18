@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/devtranslate/devtranslate.github.io/master/images/logo.png" alt="Logo DevTranslate"/>
-</p>
-
 # Contents
 1. [Portuguese](https://github.com/devtranslate/medium#portuguese)
 2. [English](https://github.com/devtranslate/medium#english)

@@ -1,12 +1,5 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/devtranslate/devtranslate.github.io/master/images/logo.png" alt="Logo DevTranslate"/>
-</p>
-
-# Contents
-1. [Emoji Key](https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md#emoji-key)
-2. [Contributors](https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md#contributors)
-
 # Emoji Key
+
 Emoji | Represents
 :---: | ---
 💬 | Answering Questions (in Issues, Gitter, Telegram, etc.)
