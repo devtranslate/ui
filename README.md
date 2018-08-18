@@ -1,11 +1,20 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/devtranslate/devtranslate.github.io/master/images/logo.png" alt="Logo DevTranslate"/>
+  </br>
+  <a href="https://medium.com/devtranslate">
+    <img src="https://img.shields.io/badge/medium-translate-brightgreen.svg?style=for-the-badge" alt="Medium"/>
+  </a>
+  <a href="(https://telegram.me/devtranslate">
+    <img src="https://img.shields.io/badge/telegram-group-lightgrey.svg?style=for-the-badge" alt="Telegram"/>
+  </a>
+  <a href="(https://www.facebook.com/devtranslate">
+    <img src="https://img.shields.io/badge/facebook-oficial_page-blue.svg?style=for-the-badge" alt="Facebook"/>
+  </a>
 </p>
 
 # Contents
 1. [Portuguese](https://github.com/devtranslate/about#portuguese)
 2. [English](https://github.com/devtranslate/about#english)
-3. [Social Media](https://github.com/devtranslate/about#social-media)
 
 # Portuguese
 
@@ -45,8 +54,3 @@ To access the contribute guide, just [click here][link-contributing].
 
 [link-contributors]: https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md
 [link-contributing]: https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md
-
-## Social Media
-[![Telegram](https://static.filehorse.com/icons/messaging-and-chat/telegram-for-desktop-icon-32.png)](https://telegram.me/devtranslate)
-[![Facebook](https://www.vidaperfeita.com.br/imagens/facebook_icone.png)](https://www.facebook.com/devtranslate/)
-[![Medium](https://i.goldvoice.club/32x32a/https://images.golos.io/DQmdgFweCvegE8UD1DkKZNyCB1GfuzzjDVrmNZ9bHNy8SoW/%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%BE.png)](https://medium.com/devtranslate) 
