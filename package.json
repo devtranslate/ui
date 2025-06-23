@@ -55,7 +55,7 @@
     "eslint-plugin-unused-imports": "4.1.4",
     "git-cz": "4.9.0",
     "husky": "9.1.7",
-    "lint-staged": "15.5.0",
+    "lint-staged": "16.1.2",
     "prettier": "3.5.3",
     "rollup": "4.36.0",
     "rollup-plugin-dts": "6.1.1",
