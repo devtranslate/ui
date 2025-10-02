@@ -1,9 +1,9 @@
-import packageJson from './package.json' assert { type: 'json' };
+import packageJson from './package.json' with { type: 'json' };
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 export default [
@@ -30,7 +30,7 @@ export default [
     ]
   },
   {
-    input: 'dist/index.d.ts',
+    input: 'src/index.ts',
     output: [{ file: packageJson.types, format: 'esm' }],
     plugins: [dts()]
   }
