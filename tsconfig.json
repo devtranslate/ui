@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2015",
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "module": "ESNext",
     "moduleResolution": "node",
     "declaration": true,
@@ -14,6 +15,7 @@
     "strict": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "typeRoots": ["./src/types"]
   }
 }

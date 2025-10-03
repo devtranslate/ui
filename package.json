@@ -30,11 +30,16 @@
   },
   "peerDependencies": {
     "react": ">=19.2.0",
-    "react-dom": ">=19.2.0"
+    "react-dom": ">=19.2.0",
+    "@emotion/react": ">=11.14.0",
+    "@emotion/styled": ">=11.14.1"
   },
   "devDependencies": {
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
+    "@emotion/babel-plugin": "11.13.5",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
     "@rollup/plugin-commonjs": "28.0.6",
     "@rollup/plugin-node-resolve": "16.0.1",
     "@rollup/plugin-terser": "0.4.4",

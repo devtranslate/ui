@@ -3,7 +3,7 @@ import type { StorybookConfig } from '@storybook/react-webpack5';
 const config: StorybookConfig = {
   stories: [
     '../src/stories/Introduction.mdx',
-    '../src/stories/DesignTokens.mdx',
+    '../src/tokens/color/color.mdx',
     '../src/**/*.mdx',
     '../src/**/*.stories.@(ts|tsx)'
   ],
@@ -16,7 +16,7 @@ const config: StorybookConfig = {
     name: '@storybook/react-webpack5',
     options: {}
   },
-  staticDirs: ['../src/static']
+  staticDirs: ['../src/assets']
 };
 
 export default config;

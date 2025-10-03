@@ -1,7 +1,10 @@
+import { ThemeProvider } from '@emotion/react';
 import type { Preview } from '@storybook/react';
 import { themes } from 'storybook/internal/theming/create';
+import { useTheme } from '../src/themes/themes';
+import type { StoryFn, StoryContext } from '@storybook/react';
 
-const preview: Preview = {
+export const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
@@ -60,8 +63,30 @@ const preview: Preview = {
           value: '#27272A'
         }
       ]
+    },
+    docs: {
+      theme: {
+        ...themes.light,
+        textColor: '#3F3F46',
+        fontBase:
+          '"Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+        fontCode:
+          '"Consolas", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace'
+      }
     }
   }
 };
 
-export default preview;
+const withThemeProvider = (storyFn: StoryFn, context: StoryContext) => {
+  return (
+    <ThemeProvider theme={useTheme()}>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+      </style>
+      {storyFn(context.args, context)}
+    </ThemeProvider>
+  );
+};
+
+export const decorators = [withThemeProvider];

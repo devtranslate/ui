@@ -1,0 +1,15 @@
+import { Meta, Canvas, Story, Controls, ArgTypes } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories.tsx';
+import { Button } from './Button';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+O componente **Button** serve para representar um botão, ou seja, uma área clicável que executará alguma ação específica.
+
+<Canvas>
+  <Story of={ButtonStories.Primary} />
+</Canvas>
+
+<Controls of={ButtonStories.Primary} />
