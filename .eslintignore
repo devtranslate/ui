@@ -1,5 +1,12 @@
-node_modules
-coverage
+# Build
 dist
+
+# Coverage directory
+coverage
+
+# Dependency directories
+node_modules
+
+# TypeScript declaration files
 .d.ts
-**/.d.ts
+**/*.d.ts

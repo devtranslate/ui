@@ -3,18 +3,41 @@
   "version": "0.0.1",
   "description": "Devtranslate UI Components",
   "private": false,
-  "author": "Larissa Mourullo",
+  "author": "Larissa Mourullo <larismourullo@gmail.com>",
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
   "files": [
     "dist"
   ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.20.0",
+    "npm": ">=10.9.3"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "react-components",
+    "accessible",
+    "components",
+    "emotion",
+    "library",
+    "design-system"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devtranslate/ui.git"
+    "url": "git+https://github.com/devtranslate/ui.git",
+    "directory": "."
   },
   "homepage": "https://github.com/devtranslate/ui#readme",
   "bugs": {
@@ -29,10 +52,10 @@
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
-    "react": ">=19.2.0",
-    "react-dom": ">=19.2.0",
     "@emotion/react": ">=11.14.0",
-    "@emotion/styled": ">=11.14.1"
+    "@emotion/styled": ">=11.14.1",
+    "react": ">=19.2.0",
+    "react-dom": ">=19.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "20.1.0",
@@ -79,7 +102,7 @@
     "typescript": "5.9.3"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "config": {
     "commitizen": {

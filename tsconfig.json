@@ -1,21 +1,37 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react",
+    "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "declaration": true,
+    "declarationMap": true,
     "emitDeclarationOnly": false,
     "sourceMap": true,
     "outDir": "dist",
     "declarationDir": "dist",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "strict": true,
     "noImplicitAny": true,
+    "noImplicitReturns": true,
     "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": false,
     "skipLibCheck": true,
-    "typeRoots": ["./src/types"]
-  }
+    "incremental": true,
+    "isolatedModules": true,
+    "preserveValueImports": false,
+    "typeRoots": ["./src/types"],
+    "baseUrl": "."
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*.stories.*", "**/*.test.*"]
 }

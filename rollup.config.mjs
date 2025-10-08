@@ -13,25 +13,46 @@ export default [
       {
         file: packageJson.main,
         format: 'cjs',
-        sourcemap: true
+        sourcemap: true,
+        exports: 'named',
+        interop: 'auto'
       },
       {
         file: packageJson.module,
         format: 'esm',
-        sourcemap: true
+        sourcemap: true,
+        exports: 'named'
       }
     ],
     plugins: [
       peerDepsExternal(),
-      resolve(),
+      resolve({
+        browser: true,
+        preferBuiltins: false
+      }),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
-      terser()
+      typescript({
+        tsconfig: './tsconfig.json'
+      }),
+      terser({
+        format: {
+          comments: false
+        },
+        compress: {
+          drop_console: true,
+          drop_debugger: true
+        }
+      })
     ]
   },
   {
     input: 'src/index.ts',
-    output: [{ file: packageJson.types, format: 'esm' }],
-    plugins: [dts()]
+    output: [{
+      file: packageJson.types,
+      format: 'esm'
+    }],
+    plugins: [
+      dts()
+    ]
   }
 ];
