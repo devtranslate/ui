@@ -1,6 +1,4 @@
-import { Color } from './color.types';
-
-export const color: Color = {
+export const color = {
   black: '#000000',
   white: '#FFFFFF',
   red: {
@@ -111,4 +109,4 @@ export const color: Color = {
     800: '#27272A',
     900: '#18181B'
   }
-};
+} as const;

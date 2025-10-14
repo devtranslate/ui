@@ -1,24 +1,22 @@
-import { Border, Outline } from './border.types';
-
-const sharedStyle = {
+const borderStyles = {
   none: 'none',
   solid: 'solid',
   dashed: 'dashed',
   dotted: 'dotted',
   double: 'double'
-};
+} as const;
 
-const sharedWidth = {
+const borderWidths = {
   none: '0px',
   hairline: '1px',
   thin: '2px',
   thick: '4px',
   heavy: '8px'
-};
+} as const;
 
-export const border: Border = {
-  style: sharedStyle,
-  width: sharedWidth,
+export const border = {
+  style: borderStyles,
+  width: borderWidths,
   radius: {
     sharp: '0px',
     small: '4px',
@@ -27,11 +25,11 @@ export const border: Border = {
     pill: '40px',
     circle: '100%'
   }
-};
+} as const;
 
-export const outline: Outline = {
-  style: sharedStyle,
-  width: sharedWidth,
+export const outline = {
+  style: borderStyles,
+  width: borderWidths,
   offset: {
     none: '0px',
     hairline: '1px',
@@ -39,4 +37,4 @@ export const outline: Outline = {
     thick: '4px',
     heavy: '8px'
   }
-};
+} as const;

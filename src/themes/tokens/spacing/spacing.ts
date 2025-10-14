@@ -1,6 +1,4 @@
-import { Spacing } from './spacing.types';
-
-export const spacing: Spacing = {
+export const spacing = {
   0: '0rem',
   1: '0.25rem',
   2: '0.5rem',
@@ -25,4 +23,4 @@ export const spacing: Spacing = {
   21: '5.25rem',
   22: '5.5rem',
   23: '5.75rem'
-};
+} as const;

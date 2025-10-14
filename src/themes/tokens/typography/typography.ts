@@ -1,6 +1,4 @@
-import { Typography } from './typography.types';
-
-export const typography: Typography = {
+export const typography = {
   fontFamily: {
     sans: '"Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
     mono: '"Consolas", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace'
@@ -49,4 +47,4 @@ export const typography: Typography = {
     tight: '4%',
     none: '0%'
   }
-};
+} as const;

@@ -2,4 +2,4 @@
 export * from './components/atoms';
 
 // Themes
-export * from './themes/themes';
+export * from './themes';
