@@ -1,53 +1,11 @@
 import { addons } from '@storybook/manager-api';
-import { create } from '@storybook/theming';
 import type { API } from '@storybook/manager-api';
+import theme from './theme';
 
 interface StoryData {
   title?: string;
   name?: string;
 }
-
-addons.setConfig({
-  theme: create({
-    base: 'light',
-
-    // Branding
-    brandTitle: 'Devtranslate UI',
-    brandImage: './images/logo.svg',
-
-    // Colors
-    colorPrimary: '#334155',
-    colorSecondary: '#F87171',
-
-    // UI Colors
-    appBg: '#FAFAFA',
-    appContentBg: '#FFFFFF',
-    appPreviewBg: '#FFFFFF',
-    appBorderColor: '#E4E4E7',
-
-    // Text Colors
-    textColor: '#3F3F46',
-    textInverseColor: '#F4F4F5',
-    textMutedColor: '#71717A',
-
-    // Toolbar Colors
-    barTextColor: '#71717A',
-    barHoverColor: '#F87171',
-    barSelectedColor: '#F87171',
-    barBg: '#FAFAFA',
-
-    // Form Colors
-    inputBg: '#FFFFFF',
-    inputBorder: '#E4E4E7',
-    inputTextColor: '#3F3F46',
-
-    // Fonts
-    fontBase:
-      '"Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
-    fontCode:
-      '"Consolas", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace'
-  })
-});
 
 const getCurrentStoryData = (api: API): StoryData | null => {
   try {
@@ -79,7 +37,7 @@ const formatPageTitle = (storyData: StoryData | null): string => {
   return PAGE_TITLE;
 };
 
-addons.register('TitleAddon', (api) => {
+addons.register('PageTitleAddon', (api) => {
   const titleElement = document.querySelector('title');
 
   if (!titleElement) {
@@ -99,3 +57,5 @@ addons.register('TitleAddon', (api) => {
     characterData: true
   });
 });
+
+addons.setConfig({ theme });

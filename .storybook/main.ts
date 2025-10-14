@@ -1,9 +1,10 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
+import { managerHead } from './manager-head';
 
 const config: StorybookConfig = {
   stories: [
     '../src/stories/Introduction.mdx',
-    '../src/tokens/color/color.mdx',
+    '../src/themes/tokens/**/*.mdx',
     '../src/**/*.mdx',
     '../src/**/*.stories.@(ts|tsx)'
   ],
@@ -16,7 +17,8 @@ const config: StorybookConfig = {
     name: '@storybook/react-webpack5',
     options: {}
   },
-  staticDirs: ['../src/assets']
+  staticDirs: ['.'],
+  managerHead: (head) => `${head} ${managerHead}`
 };
 
 export default config;

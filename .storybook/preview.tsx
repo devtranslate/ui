@@ -1,10 +1,9 @@
-import { ThemeProvider } from '@emotion/react';
-import type { Preview } from '@storybook/react';
-import { themes } from 'storybook/internal/theming/create';
-import { useTheme } from '../src/themes/themes';
+import { css, Global, ThemeProvider } from '@emotion/react';
 import type { StoryFn, StoryContext } from '@storybook/react';
+import { styles, theme } from '../src/themes';
+import previewTheme from './theme';
 
-export const preview: Preview = {
+export default {
   parameters: {
     controls: {
       matchers: {
@@ -16,74 +15,43 @@ export const preview: Preview = {
       viewports: {
         mobile: {
           name: 'Mobile',
-          styles: {
-            width: '375px',
-            height: '667px'
-          }
+          styles: { width: theme.breakpoint.xs.min, height: '667px' }
         },
         tablet: {
           name: 'Tablet',
-          styles: {
-            width: '768px',
-            height: '1024px'
-          }
+          styles: { width: theme.breakpoint.sm.min, height: '1024px' }
         },
         desktop: {
           name: 'Desktop',
-          styles: {
-            width: '1024px',
-            height: '900px'
-          }
+          styles: { width: theme.breakpoint.md.min, height: '768px' }
         },
         widescreen: {
           name: 'Widescreen',
-          styles: {
-            width: '1280px',
-            height: '1080px'
-          }
+          styles: { width: theme.breakpoint.lg.min, height: '1024px' }
         },
         ultrawide: {
           name: 'Ultra Wide (4K)',
-          styles: {
-            width: '1536px',
-            height: '1080px'
-          }
+          styles: { width: theme.breakpoint.xl.min, height: '1080px' }
         }
       }
     },
     backgrounds: {
-      default: 'light',
+      default: 'Claro',
       values: [
-        {
-          name: 'Claro',
-          value: '#FAFAFA'
-        },
-        {
-          name: 'Escuro',
-          value: '#27272A'
-        }
+        { name: 'Claro', value: theme.color.gray[50] },
+        { name: 'Escuro', value: theme.color.gray[900] }
       ]
     },
     docs: {
-      theme: {
-        ...themes.light,
-        textColor: '#3F3F46',
-        fontBase:
-          '"Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
-        fontCode:
-          '"Consolas", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace'
-      }
+      theme: previewTheme
     }
   }
 };
 
 const withThemeProvider = (storyFn: StoryFn, context: StoryContext) => {
   return (
-    <ThemeProvider theme={useTheme()}>
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-      </style>
+    <ThemeProvider theme={theme}>
+      <Global styles={styles} />
       {storyFn(context.args, context)}
     </ThemeProvider>
   );

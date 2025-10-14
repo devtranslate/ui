@@ -1,0 +1,22 @@
+import { globalStyles } from '../src/themes/styles/global';
+import { theme } from '../src/themes';
+
+export const managerHead = `
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Larissa Mourullo" />
+  <meta name="keywords" content="Design System, UI Components, React, TypeScript, Devtranslate" />
+  <meta
+    name="description"
+    content="Design System oficial do Devtranslate. Conjunto de componentes React reutilizáveis e padronizados para criar interfaces consistentes e acessíveis."
+  />
+  <link rel="icon" href="https://devtranslate.io/favicon.ico" />
+  <style>
+    ${globalStyles(theme)}
+    .sidebar-header img {
+      max-height: 1.5rem;
+      width: 100%;
+      max-width: fit-content !important;
+    }
+  </style>
+`;
