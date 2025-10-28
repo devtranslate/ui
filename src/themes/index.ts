@@ -1,13 +1,13 @@
 import { css } from '@emotion/react';
 import { globalStyles } from './styles/global';
 import { resetStyles } from './styles/reset';
-import { border, outline } from './tokens/border/border';
-import { breakpoint } from './tokens/breakpoint/breakpoint';
-import { color } from './tokens/color/color';
-import { elevation } from './tokens/elevation/elevation';
-import { opacity } from './tokens/opacity/opacity';
-import { spacing } from './tokens/spacing/spacing';
-import { typography } from './tokens/typography/typography';
+import { border, outline } from './tokens/border';
+import { breakpoint } from './tokens/breakpoint';
+import { color } from './tokens/color';
+import { elevation } from './tokens/elevation';
+import { opacity } from './tokens/opacity';
+import { spacing } from './tokens/spacing';
+import { typography } from './tokens/typography';
 
 export const designTokens = {
   border,

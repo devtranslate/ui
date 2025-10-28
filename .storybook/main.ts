@@ -4,7 +4,7 @@ import { managerHead } from './manager-head';
 const config: StorybookConfig = {
   stories: [
     '../src/stories/Introduction.mdx',
-    '../src/themes/tokens/**/*.mdx',
+    '../src/stories/fundamentals/**/*.mdx',
     '../src/**/*.mdx',
     '../src/**/*.stories.@(ts|tsx)'
   ],
