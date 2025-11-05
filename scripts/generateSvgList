@@ -1,0 +1,18 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const files = {};
+const pathIcons = path.join(__dirname, '../src/assets/svgs');
+
+if (!fs.existsSync(pathIcons)) fs.mkdirSync(pathIcons);
+
+files['icons'] = fs
+  .readdirSync(pathIcons)
+  .filter(file => file.includes('.svg'))
+  .map(file => file.replace('.svg', ''));
+
+fs.writeFileSync('./src/assets/svgList.js', `export default ${JSON.stringify(files)}`);

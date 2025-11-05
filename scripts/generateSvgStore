@@ -1,0 +1,19 @@
+import fs from 'fs';
+import path from 'path';
+// @ts-ignore
+import svgstore from 'svgstore';
+import svgList from '../src/assets/svgList.js';
+
+const pathIcons = path.join(path.resolve(), 'src/assets/svgs');
+const sprites = svgstore();
+
+svgList.icons.forEach((iconName) => {
+  const iconPath = path.join(pathIcons, `${iconName}.svg`);
+  if (fs.existsSync(iconPath)) {
+    let svgContent = fs.readFileSync(iconPath, 'utf8');
+    sprites.add(iconName, svgContent);
+  }
+});
+
+const spriteContent = sprites.toString({ inline: true });
+fs.writeFileSync('src/assets/svg-store.svg', spriteContent);

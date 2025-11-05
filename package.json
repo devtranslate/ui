@@ -49,7 +49,10 @@
     "lint:code": "tsc --noEmit && eslint . && prettier --check .",
     "lint:fix": "tsc --noEmit && eslint --fix . && prettier --write .",
     "storybook": "storybook dev -p 4000",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "svg:list": "node scripts/generateSvgList",
+    "svg:store": "node scripts/generateSvgStore",
+    "svg:generate": "npm run svg:list && npm run svg:store"
   },
   "peerDependencies": {
     "@emotion/react": ">=11.14.0",
@@ -98,6 +101,7 @@
     "rollup-plugin-dts": "6.2.3",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "storybook": "8.6.14",
+    "svgstore": "3.0.1",
     "tslib": "2.8.1",
     "typescript": "5.9.3"
   },
