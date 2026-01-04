@@ -1,6 +1,6 @@
-import { addons } from '@storybook/manager-api';
-import type { API } from '@storybook/manager-api';
-import theme from './theme';
+import type { API } from 'storybook/manager-api';
+import { addons } from 'storybook/manager-api';
+import storybookTheme from './storybook-theme';
 
 interface StoryData {
   title?: string;
@@ -58,4 +58,4 @@ addons.register('PageTitleAddon', (api) => {
   });
 });
 
-addons.setConfig({ theme });
+addons.setConfig({ theme: storybookTheme });

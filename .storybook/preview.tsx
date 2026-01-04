@@ -1,9 +1,9 @@
-import { css, Global, ThemeProvider } from '@emotion/react';
-import type { StoryFn, StoryContext } from '@storybook/react';
+import { Global, ThemeProvider } from '@emotion/react';
+import type { Preview } from '@storybook/react-webpack5';
 import { styles, theme } from '../src/themes';
-import previewTheme from './theme';
+import storybookTheme from './storybook-theme.ts';
 
-export default {
+const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
@@ -43,18 +43,17 @@ export default {
       ]
     },
     docs: {
-      theme: previewTheme
+      theme: storybookTheme
     }
-  }
+  },
+  decorators: [
+    (Story, context) => (
+      <ThemeProvider theme={theme}>
+        <Global styles={styles} />
+        <Story {...context} />
+      </ThemeProvider>
+    )
+  ]
 };
 
-const withThemeProvider = (storyFn: StoryFn, context: StoryContext) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Global styles={styles} />
-      {storyFn(context.args, context)}
-    </ThemeProvider>
-  );
-};
-
-export const decorators = [withThemeProvider];
+export default preview;

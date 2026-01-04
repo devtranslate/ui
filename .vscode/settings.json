@@ -5,7 +5,8 @@
   "css.validate": false,
   "scss.validate": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
-  "eslint.validate": ["javascript"]
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"]
 }

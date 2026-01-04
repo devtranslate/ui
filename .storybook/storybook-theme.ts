@@ -1,4 +1,4 @@
-import { create } from 'storybook/internal/theming';
+import { create } from 'storybook/theming';
 import { theme } from '../src/themes';
 
 export default create({
@@ -6,7 +6,7 @@ export default create({
 
   // Branding
   brandTitle: 'Devtranslate UI',
-  brandImage: './logo.svg',
+  brandImage: './storybook-logo.svg',
 
   // Colors
   colorPrimary: theme.color.blueGray[700],

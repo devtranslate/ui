@@ -1,24 +1,29 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
-import { managerHead } from './manager-head';
+
+import path from 'path';
 
 const config: StorybookConfig = {
   stories: [
     '../src/stories/Introduction.mdx',
     '../src/stories/fundamentals/**/*.mdx',
     '../src/**/*.mdx',
-    '../src/**/*.stories.@(ts|tsx)'
+    '../src/**/*.stories.@(ts|tsx|mdx)'
   ],
   addons: [
     '@storybook/addon-webpack5-compiler-swc',
-    '@storybook/addon-essentials',
-    '@storybook/addon-a11y'
+    '@storybook/addon-a11y',
+    '@storybook/addon-docs'
   ],
-  framework: {
-    name: '@storybook/react-webpack5',
-    options: {}
-  },
-  staticDirs: ['.'],
-  managerHead: (head) => `${head} ${managerHead}`
+  framework: '@storybook/react-webpack5',
+  staticDirs: ['.', '../src'],
+  webpackFinal: async (config) => {
+    if (!config.resolve) config.resolve = {};
+    if (!config.resolve.alias || Array.isArray(config.resolve.alias)) {
+      config.resolve.alias = {};
+    }
+    (config.resolve.alias as Record<string, string>)['src'] = path.resolve(process.cwd(), 'src');
+    return config;
+  }
 };
 
 export default config;
