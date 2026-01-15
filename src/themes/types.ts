@@ -1,5 +1,24 @@
 import { designTokens } from './index';
 
-export type DesignTokens = typeof designTokens;
+// Theme
+export type Theme = typeof designTokens & {};
 
-export type Theme = DesignTokens & {};
+// Border
+
+// Breakpoint
+
+// Color
+
+// Elevation
+
+// Opacity
+
+// Spacing
+
+// Typography
+export type TypographyDisplaySizes = keyof Theme['typography']['display'];
+export type TypographyHeadingSizes = keyof Theme['typography']['heading'];
+export type TypographyBodySizes = keyof Theme['typography']['body'];
+export type TypographyWeightSizes = keyof Theme['typography']['fontWeight'];
+export type TypographyLineHeightSizes = keyof Theme['typography']['lineHeight'];
+export type TypographyLetterSpacingSizes = keyof Theme['typography']['letterSpacing'];
