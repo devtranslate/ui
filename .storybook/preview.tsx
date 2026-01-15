@@ -36,11 +36,10 @@ const preview: Preview = {
       }
     },
     backgrounds: {
-      default: 'Claro',
-      values: [
-        { name: 'Claro', value: theme.color.gray[50] },
-        { name: 'Escuro', value: theme.color.gray[900] }
-      ]
+      options: {
+        light: { name: 'Light', value: theme.color.gray[50] },
+        dark: { name: 'Dark', value: theme.color.gray[900] }
+      }
     },
     docs: {
       theme: storybookTheme
@@ -53,7 +52,10 @@ const preview: Preview = {
         <Story {...context} />
       </ThemeProvider>
     )
-  ]
+  ],
+  initialGlobals: {
+    backgrounds: { value: 'light' }
+  }
 };
 
 export default preview;

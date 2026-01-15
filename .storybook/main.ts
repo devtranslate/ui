@@ -16,6 +16,19 @@ const config: StorybookConfig = {
   ],
   framework: '@storybook/react-webpack5',
   staticDirs: ['.', '../src'],
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
+      propFilter: (prop) => {
+        if (prop.parent) {
+          return !prop.parent.fileName.includes('node_modules');
+        }
+        return true;
+      }
+    }
+  },
   webpackFinal: async (config) => {
     if (!config.resolve) config.resolve = {};
     if (!config.resolve.alias || Array.isArray(config.resolve.alias)) {

@@ -1,0 +1,67 @@
+import { ArgTypes, Canvas, Controls, Meta, Story } from '@storybook/addon-docs/blocks';
+import { Text } from './Text';
+import * as TextStories from './Text.stories.tsx';
+
+<Meta of={TextStories} />
+
+# Text
+
+The **Text** component is used to create paragraphs and general text content.
+
+<Canvas>
+  <Story of={TextStories.Playground} />
+</Canvas>
+
+<Controls of={TextStories.Playground} />
+
+## Semantic
+
+Currently this component offers the tags `b`, `i`, `p`, `s`, `small`, `span`, `strong` and `u`. Through its usage, the component will be displayed differently in each case, as can be observed below:
+
+<Story of={TextStories.Semantic} />
+
+> Always remember to analyze the component you intend to implement and pass the `as` prop appropriate to the context where it will be inserted. This practice is important as it helps preserve the page semantics.
+
+<br />
+
+## Colors
+
+By changing the **color** property, you can set the brand colors on the component.
+
+<Story of={TextStories.Colors} />
+
+## Sizes
+
+With the **size** property, you can set the component to five different sizes:
+
+<Story of={TextStories.Sizes} />
+
+## Weight
+
+The **weight** property allows you to set the font weight of the component.
+
+<Story of={TextStories.Weight} />
+
+## Letter Spacing
+
+With the **letterSpacing** property, you can adjust the spacing between letters in the component.
+
+<Story of={TextStories.LetterSpacing} />
+
+## Text Transform
+
+Using the **textTransform** property, you can change the capitalization of the component.
+
+<Story of={TextStories.TextTransform} />
+
+## Text Align
+
+Use the **textAlign** property to change the text alignment.
+
+<Story of={TextStories.TextAlign} />
+
+## Line Clamp
+
+Pass the **lineClamp** property with the desired number of lines to truncate the text.
+
+<Story of={TextStories.LineClamp} />
