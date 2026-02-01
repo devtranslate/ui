@@ -45,8 +45,6 @@ export const globalStyles = (theme: Theme) => css`
   h4,
   h5,
   h6 {
-    font-size: ${theme.typography.heading.xxs.fontSize};
-    line-height: ${theme.typography.heading.xxs.lineHeight};
     font-weight: ${theme.typography.fontWeight.bold};
   }
 `;

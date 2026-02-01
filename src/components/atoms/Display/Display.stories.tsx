@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text } from './Text';
-import { TextProps } from './Text.types';
+import { Text } from '../Text/Text';
+import { TextProps } from '../Text/Text.types';
+import { Display } from './Display';
+import { DisplayProps } from './Display.types';
 
-const meta: Meta<typeof Text> = {
-  title: 'Components/Atoms/Text',
-  component: Text,
+const meta: Meta<typeof Display> = {
+  title: 'Components/Atoms/Display',
+  component: Display,
   parameters: {
     layout: 'centered'
   },
@@ -14,11 +16,7 @@ const meta: Meta<typeof Text> = {
     },
     size: {
       control: 'select',
-      options: ['xs', 'sm', 'md', 'lg', 'xl']
-    },
-    weight: {
-      control: 'select',
-      options: ['light', 'regular', 'medium', 'bold', 'heavy']
+      options: ['sm', 'md', 'lg']
     },
     letterSpacing: {
       control: 'select',
@@ -34,7 +32,7 @@ const meta: Meta<typeof Text> = {
 };
 
 export default meta;
-type Story = StoryObj<TextProps>;
+type Story = StoryObj<DisplayProps>;
 
 const StoryContainer: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: '12px 0 24px' }}>
@@ -58,38 +56,13 @@ const StoryCaption: React.FC<{ children: React.ReactNode; align?: TextProps['tex
   </Text>
 );
 
-const shortText = 'The quick brown fox jumps over the lazy dog.';
+const shortText = 'Display Heading';
 
 const longText =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
 export const Playground: Story = {
-  args: { as: 'p', children: longText }
-};
-
-export const Semantic: Story = {
-  render: () => {
-    const tags = [
-      { tag: 'b', description: 'Bold' },
-      { tag: 'i', description: 'Italic' },
-      { tag: 'p', description: 'Paragraph' },
-      { tag: 's', description: 'Strikethrough' },
-      { tag: 'small', description: 'Small' },
-      { tag: 'span', description: 'Span' },
-      { tag: 'strong', description: 'Strong' },
-      { tag: 'u', description: 'Underline' }
-    ] as const;
-    return (
-      <StoryContainer>
-        {tags.map((item) => (
-          <div key={item.tag}>
-            <StoryCaption>{item.description}</StoryCaption>
-            <Text as={item.tag}>{shortText}</Text>
-          </div>
-        ))}
-      </StoryContainer>
-    );
-  }
+  args: { as: 'h3', size: 'md', children: shortText }
 };
 
 export const Colors: Story = {
@@ -108,7 +81,9 @@ export const Colors: Story = {
         {colors.map((color) => (
           <div key={color}>
             <StoryCaption>{color}</StoryCaption>
-            <Text color={`${color}[600]`}>{shortText}</Text>
+            <Display as="h3" color={`${color}[600]`}>
+              {shortText}
+            </Display>
           </div>
         ))}
       </StoryContainer>
@@ -118,35 +93,15 @@ export const Colors: Story = {
 
 export const Sizes: Story = {
   render: () => {
-    const sizes: NonNullable<TextProps['size']>[] = ['xs', 'sm', 'md', 'lg', 'xl'];
+    const sizes: NonNullable<DisplayProps['size']>[] = ['sm', 'md', 'lg'];
     return (
       <StoryContainer>
         {sizes.map((size) => (
           <div key={size}>
             <StoryCaption>{size}</StoryCaption>
-            <Text size={size}>{shortText}</Text>
-          </div>
-        ))}
-      </StoryContainer>
-    );
-  }
-};
-
-export const Weight: Story = {
-  render: () => {
-    const weights: NonNullable<TextProps['weight']>[] = [
-      'light',
-      'regular',
-      'medium',
-      'bold',
-      'heavy'
-    ];
-    return (
-      <StoryContainer>
-        {weights.map((weight) => (
-          <div key={weight}>
-            <StoryCaption>{weight}</StoryCaption>
-            <Text weight={weight}>{shortText}</Text>
+            <Display as="h3" size={size}>
+              {shortText}
+            </Display>
           </div>
         ))}
       </StoryContainer>
@@ -168,7 +123,9 @@ export const LetterSpacing: Story = {
         {letterSpacings.map((spacing) => (
           <div key={spacing}>
             <StoryCaption>{spacing}</StoryCaption>
-            <Text letterSpacing={spacing}>{shortText}</Text>
+            <Display as="h3" letterSpacing={spacing}>
+              {shortText}
+            </Display>
           </div>
         ))}
       </StoryContainer>
@@ -189,7 +146,9 @@ export const TextTransform: Story = {
         {textTransform.map((transform) => (
           <div key={transform}>
             <StoryCaption>{transform}</StoryCaption>
-            <Text textTransform={transform}>{shortText}</Text>
+            <Display as="h3" textTransform={transform}>
+              {shortText}
+            </Display>
           </div>
         ))}
       </StoryContainer>
@@ -205,7 +164,9 @@ export const TextAlign: Story = {
         {textAlign.map((align) => (
           <div key={align}>
             <StoryCaption align={align}>{align}</StoryCaption>
-            <Text textAlign={align}>{shortText}</Text>
+            <Display as="h3" textAlign={align}>
+              {shortText}
+            </Display>
           </div>
         ))}
       </StoryContainer>
@@ -217,7 +178,9 @@ export const LineClamp: Story = {
   render: () => {
     return (
       <StoryContainer>
-        <Text lineClamp={2}>{longText}</Text>
+        <Display as="h3" lineClamp={2}>
+          {longText}
+        </Display>
       </StoryContainer>
     );
   }

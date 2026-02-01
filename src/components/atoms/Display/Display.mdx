@@ -1,0 +1,61 @@
+import { ArgTypes, Canvas, Controls, Meta, Story } from '@storybook/addon-docs/blocks';
+import { Display } from './Display';
+import * as DisplayStories from './Display.stories.tsx';
+
+<Meta of={DisplayStories} />
+
+# Display
+
+The **Display** component is ideal for large visual highlights, such as hero sections or main calls to action. For semantic section titles and page structure, prefer the **Heading** component.
+
+<Canvas>
+  <Story of={DisplayStories.Playground} />
+</Canvas>
+
+<Controls of={DisplayStories.Playground} />
+
+## Semantic
+
+Currently this component offers the tags `h1`, `h2`, `h3`, `h4`, `h5`, `h6` and `span`.
+
+> Always remember to analyze the component you intend to implement and pass the `as` prop appropriate to the context where it will be inserted. This practice is important as it helps preserve the page semantics.
+
+<br />
+
+## Colors
+
+The **color** property allows you to customize the color of the component.
+
+<Story of={DisplayStories.Colors} />
+
+> Always use the color tokens defined in the design system, such as `gray[300]`, `blue[600]`, `red[500]`, etc. This ensures visual consistency and alignment with the brand guidelines. Avoid using arbitrary color values.
+
+## Sizes
+
+The **size** property allows you to set the component to six different sizes:
+
+<Story of={DisplayStories.Sizes} />
+
+## Letter Spacing
+
+The **letterSpacing** property lets you adjust the spacing between letters in the component.
+
+<Story of={DisplayStories.LetterSpacing} />
+
+## Text Transform
+
+Using the **textTransform** property, you can change the capitalization of the component.
+
+<Story of={DisplayStories.TextTransform} />
+
+## Text Align
+
+Use the **textAlign** property to change the text alignment.
+
+<Story of={DisplayStories.TextAlign} />
+
+## Line Clamp
+
+Use the **lineClamp** property to specify the maximum number of lines before truncating the text.
+
+<Story of={DisplayStories.LineClamp} />
