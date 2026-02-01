@@ -38,4 +38,15 @@ export const globalStyles = (theme: Theme) => css`
     font-size: ${theme.typography.body.xs.fontSize};
     line-height: ${theme.typography.body.xs.lineHeight};
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: ${theme.typography.heading.xxs.fontSize};
+    line-height: ${theme.typography.heading.xxs.lineHeight};
+    font-weight: ${theme.typography.fontWeight.bold};
+  }
 `;

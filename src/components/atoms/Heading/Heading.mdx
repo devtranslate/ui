@@ -1,0 +1,61 @@
+import { ArgTypes, Canvas, Controls, Meta, Story } from '@storybook/addon-docs/blocks';
+import { Heading } from './Heading';
+import * as HeadingStories from './Heading.stories.tsx';
+
+<Meta of={HeadingStories} />
+
+# Heading
+
+The **Heading** component should be used for titles that introduce new sections.
+
+<Canvas>
+  <Story of={HeadingStories.Playground} />
+</Canvas>
+
+<Controls of={HeadingStories.Playground} />
+
+## Semantic
+
+Currently this component offers the tags `h1`, `h2`, `h3`, `h4`, `h5`, `h6` and `span`.
+
+> Always remember to analyze the component you intend to implement and pass the `as` prop appropriate to the context where it will be inserted. This practice is important as it helps preserve the page semantics.
+
+<br />
+
+## Colors
+
+The **color** property allows you to customize the color of the component.
+
+<Story of={HeadingStories.Colors} />
+
+> Always use the color tokens defined in the design system, such as `gray[300]`, `blue[600]`, `red[500]`, etc. This ensures visual consistency and alignment with the brand guidelines. Avoid using arbitrary color values.
+
+## Sizes
+
+With the **size** property, you can set the component to six different sizes:
+
+<Story of={HeadingStories.Sizes} />
+
+## Letter Spacing
+
+With the **letterSpacing** property, you can adjust the spacing between letters in the component.
+
+<Story of={HeadingStories.LetterSpacing} />
+
+## Text Transform
+
+Using the **textTransform** property, you can change the capitalization of the component.
+
+<Story of={HeadingStories.TextTransform} />
+
+## Text Align
+
+Use the **textAlign** property to change the text alignment.
+
+<Story of={HeadingStories.TextAlign} />
+
+## Line Clamp
+
+Pass the **lineClamp** property with the desired number of lines to truncate the text.
+
+<Story of={HeadingStories.LineClamp} />
