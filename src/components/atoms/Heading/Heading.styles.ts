@@ -24,7 +24,7 @@ const getThemeColor = (theme: any, color?: string) => {
   return colorDefault;
 };
 
-export const HeadingStyled = styled.p<HeadingStyledProps>`
+export const HeadingStyled = styled.span<HeadingStyledProps>`
   ${({ theme, color, size, letterSpacing, textTransform, textAlign, lineClamp }) => css`
     color: ${getThemeColor(theme, color)};
     font-weight: ${theme.typography.fontWeight.bold};
@@ -32,7 +32,6 @@ export const HeadingStyled = styled.p<HeadingStyledProps>`
     ${letterSpacing && `letter-spacing: ${theme.typography.letterSpacing[letterSpacing]};`};
     ${textTransform && `text-transform: ${textTransform};`}
     ${textAlign && `text-align: ${textAlign};`}
-
 
     ${size &&
     `

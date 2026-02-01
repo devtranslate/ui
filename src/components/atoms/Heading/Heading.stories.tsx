@@ -56,7 +56,7 @@ const StoryCaption: React.FC<{ children: React.ReactNode; align?: TextProps['tex
   </Text>
 );
 
-const shortText = 'Lead Heading';
+const shortText = 'Sample Heading';
 
 const longText =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';

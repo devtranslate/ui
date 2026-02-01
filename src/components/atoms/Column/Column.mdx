@@ -1,0 +1,59 @@
+import { ArgTypes, Canvas, Controls, Meta, Story } from '@storybook/addon-docs/blocks';
+import { Column } from './Column';
+import * as ColumnStories from './Column.stories.tsx';
+
+<Meta of={ColumnStories} />
+
+# Column
+
+The **Column** component is intended to be used as a child of the `Grid` component, defining the layout of content within the grid structure.
+
+<Canvas>
+  <Story of={ColumnStories.Playground} />
+</Canvas>
+
+<Controls of={ColumnStories.Playground} />
+
+## Grid Column
+
+Use the **colSpan** property to specify how many columns the column should occupy within the grid.
+
+<Story of={ColumnStories.GridColumn} />
+
+## Grid Row
+
+Use the **rowSpan** property to specify how many rows the column should occupy within the grid.
+
+<Story of={ColumnStories.GridRow} />
+
+## Grid Column Start
+
+Use the **colStart** property to set the starting column line for the column. This is useful for spacing or aligning columns to specific grid positions.
+
+<Story of={ColumnStories.GridColumnStart} />
+
+> The **colEnd** property can be used to specify where the column should end, providing more control over the horizontal layout.
+
+<br />
+
+## Grid Row Start
+
+Use the **rowStart** property to set the starting row line for the column. This allows you to control its vertical position within the grid.
+
+<Story of={ColumnStories.GridRowStart} />
+
+> The **rowEnd** property can be used to specify where the row should end, providing more control over the vertical layout.
+
+<br />
+
+## Align Self
+
+The **alignSelf** property allows you to override the default alignment for the column along the block (vertical) axis.
+
+<Story of={ColumnStories.AlignSelf} />
+
+## Justify Self
+
+The **justifySelf** property allows you to override the default alignment for the column along the inline (horizontal) axis.
+
+<Story of={ColumnStories.JustifySelf} />
