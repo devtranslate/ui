@@ -1,4 +1,5 @@
 import {
+  Color,
   TypographyBodySizes,
   TypographyLetterSpacingSizes,
   TypographyWeightSizes
@@ -8,7 +9,7 @@ export type TextProps = {
   /** HTML element or React component used as the main tag for the text. */
   as?: React.ElementType;
   /** Text color. Accepts only the theme key (e.g., 'blue[500]'). */
-  color?: string;
+  color?: Color;
   /** Font size and line height. */
   size?: TypographyBodySizes;
   /** Font weight. */
@@ -18,11 +19,13 @@ export type TextProps = {
   /** Text capitalization style. */
   textTransform?: React.CSSProperties['textTransform'];
   /** Line clamp limit for truncating text. */
-  lineClamp?: number;
+  lineClamp?: React.CSSProperties['lineClamp'];
   /** Text alignment. */
   textAlign?: React.CSSProperties['textAlign'];
   /** Defines the text content. */
   children?: React.ReactNode;
+  /** Inline style for the text. */
+  style?: React.CSSProperties;
 };
 
 export type TextStyledProps = {

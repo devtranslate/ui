@@ -25,21 +25,21 @@ const getThemeColor = (theme: any, color?: string) => {
 };
 
 export const TextStyled = styled.p<TextStyledProps>`
-  ${({ theme, color, size, weight, letterSpacing, textTransform, textAlign, lineClamp }) => css`
+  ${({ theme, color, size, weight, letterSpacing }) => css`
     color: ${getThemeColor(theme, color)};
 
     ${weight && `font-weight: ${theme.typography.fontWeight[weight]};`}
     ${letterSpacing && `letter-spacing: ${theme.typography.letterSpacing[letterSpacing]};`};
-    ${textTransform && `text-transform: ${textTransform};`}
-    ${textAlign && `text-align: ${textAlign};`}
-
-
     ${size &&
     `
       font-size: ${theme.typography.body[size].fontSize};
       line-height: ${theme.typography.body[size].lineHeight};
     `}
+  `};
 
+  ${({ textTransform, textAlign, lineClamp }) => css`
+    ${textTransform && `text-transform: ${textTransform};`}
+    ${textAlign && `text-align: ${textAlign};`}
     ${lineClamp &&
     `
       overflow: hidden;
