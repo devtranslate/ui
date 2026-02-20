@@ -8,6 +8,9 @@ export type Theme = typeof designTokens & {};
 // Breakpoint
 
 // Color
+export type ColorKeys = keyof Theme['color'];
+export type ColorShades = keyof Theme['color'][ColorKeys];
+export type Color = `${ColorKeys}[${ColorShades}]`;
 
 // Elevation
 

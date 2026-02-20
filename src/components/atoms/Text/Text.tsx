@@ -8,3 +8,5 @@ export const Text: React.FC<TextProps> = ({ children, as = 'p', ...props }) => {
     </TextStyled>
   );
 };
+
+export * from './Text.types';

@@ -1,10 +1,10 @@
-import { TypographyDisplaySizes, TypographyLetterSpacingSizes } from 'src/themes/types';
+import { Color, TypographyDisplaySizes, TypographyLetterSpacingSizes } from 'src/themes/types';
 
 export type DisplayProps = {
   /** HTML element or React component used as the main tag for the display. */
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
   /** Display color. Accepts only the theme key (e.g., 'blue[500]'). */
-  color?: string;
+  color?: Color;
   /** Font size and line height. */
   size?: TypographyDisplaySizes;
   /** Letter spacing. */
@@ -12,11 +12,13 @@ export type DisplayProps = {
   /** Display capitalization style. */
   textTransform?: React.CSSProperties['textTransform'];
   /** Line clamp limit for truncating display. */
-  lineClamp?: number;
+  lineClamp?: React.CSSProperties['lineClamp'];
   /** Display alignment. */
   textAlign?: React.CSSProperties['textAlign'];
   /** Defines the display content. */
   children?: React.ReactNode;
+  /** Inline style for the display. */
+  style?: React.CSSProperties;
 };
 
 export type DisplayStyledProps = {

@@ -8,3 +8,5 @@ export const Display: React.FC<DisplayProps> = ({ children, size = 'md', ...prop
     </DisplayStyled>
   );
 };
+
+export * from './Display.types';

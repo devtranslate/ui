@@ -33,5 +33,5 @@
     "baseUrl": "."
   },
   "include": ["src/**/*"],
-  "exclude": ["**/*.stories.*", "**/*.test.*"]
+  "exclude": ["**/*.stories.*", "**/*.mdx", "**/*.test.*"]
 }

@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { theme } from '../../../themes';
+import { Grid, GridProps } from '../../molecules';
 import { Text } from '../Text/Text';
+import { TextProps } from '../Text/Text.types';
 import { Column } from './Column';
 import { ColumnProps } from './Column.types';
 
@@ -43,22 +45,28 @@ const meta: Meta<typeof Column> = {
 export default meta;
 type Story = StoryObj<ColumnProps>;
 
-const StoryContainer: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div
-    style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      gap: 16,
-      padding: '12px 0 24px'
-    }}
-  >
-    {children}
-  </div>
-);
-
-const StoryColumn = ({ style, children, ...columnProps }: ColumnProps) => {
+const StoryContainer = (props: GridProps) => {
+  const { children, templateColumns, ...style } = props;
   return (
-    <Column style={{ padding: '1rem', ...style }} {...columnProps}>
+    <Grid
+      gap={4}
+      templateColumns={templateColumns || 'repeat(3, 1fr)'}
+      style={{
+        padding: `${theme.spacing[3]} 0 ${theme.spacing[6]}`,
+        ...style
+      }}
+    >
+      {children}
+    </Grid>
+  );
+};
+
+const GridItem = ({ style, children, ...columnProps }: ColumnProps) => {
+  return (
+    <Column
+      style={{ padding: theme.spacing[4], backgroundColor: theme.color.gray[200], ...style }}
+      {...columnProps}
+    >
       <Text size="sm" weight="bold" textAlign="center">
         {children}
       </Text>
@@ -66,107 +74,123 @@ const StoryColumn = ({ style, children, ...columnProps }: ColumnProps) => {
   );
 };
 
+const StoryCaption = ({
+  children,
+  align
+}: {
+  children: React.ReactNode;
+  align?: TextProps['textAlign'];
+}) => (
+  <Text
+    weight="bold"
+    color="gray[500]"
+    letterSpacing="relaxed"
+    textTransform="uppercase"
+    textAlign={align}
+    style={{ fontSize: 11 }}
+  >
+    {children}
+  </Text>
+);
+
 export const Playground: Story = { args: { children: 'Sample Column' } };
 
-export const GridColumn: Story = {
+export const ColSpan: Story = {
   render: () => (
     <StoryContainer>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }} colSpan="span 2">
-        1 [colSpan="span 2"]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[200] }} colSpan={3}>
-        2 [colSpan=3]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[300] }} colSpan="span 3">
-        3 [colSpan="span 3"]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[200] }} colSpan={1}>
-        4 [colSpan=1]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }} colSpan="2/4">
-        5 [colSpan="2/4"]
-      </StoryColumn>
+      <GridItem colSpan="span 2">colSpan="span 2"</GridItem>
+      <GridItem colSpan={3}>colSpan={3}</GridItem>
+      <GridItem colSpan="span 3">colSpan="span 3"</GridItem>
+      <GridItem colSpan={1}>colSpan={1}</GridItem>
+      <GridItem colSpan="2/4">colSpan="2/4"</GridItem>
     </StoryContainer>
   )
 };
 
-export const GridRow: Story = {
+export const RowSpan: Story = {
   render: () => (
     <StoryContainer>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }} rowSpan="span 2">
-        1 [rowSpan="span 2"]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[200] }} rowSpan={3}>
-        2 [rowSpan=3]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[300] }} rowSpan="1/4">
-        3 [rowSpan="1/4"]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[200] }} rowSpan="span 1">
-        4[rowSpan="span 1"]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }} rowSpan="2/4">
-        5 [rowSpan="2/4"]
-      </StoryColumn>
+      <GridItem rowSpan="span 2">rowSpan="span 2"</GridItem>
+      <GridItem rowSpan={3}>rowSpan={3}</GridItem>
+      <GridItem rowSpan="1/4">rowSpan="1/4"</GridItem>
+      <GridItem rowSpan="span 1">rowSpan="span 1"</GridItem>
+      <GridItem rowSpan="2/4">rowSpan="2/4"</GridItem>
     </StoryContainer>
   )
 };
 
-export const GridColumnStart: Story = {
+export const ColStart: Story = {
   render: () => (
     <StoryContainer>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[300] }} colStart={2}>
-        1 [colStart=2]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>2</StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>3</StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>4</StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>5</StoryColumn>
+      <GridItem colStart={2} style={{ backgroundColor: theme.color.red[200] }}>
+        colStart={2}
+      </GridItem>
+      <GridItem>Item 2</GridItem>
+      <GridItem>Item 3</GridItem>
+      <GridItem>Item 4</GridItem>
+      <GridItem>Item 5</GridItem>
     </StoryContainer>
   )
 };
 
-export const GridRowStart: Story = {
+export const RowStart: Story = {
   render: () => (
     <StoryContainer>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[300] }} rowStart={2}>
-        1 [rowStart=2]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>2</StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>3</StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>4</StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>5</StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>6</StoryColumn>
+      <GridItem rowStart={2} style={{ backgroundColor: theme.color.red[200] }}>
+        rowStart={2}
+      </GridItem>
+      <GridItem>Item 2</GridItem>
+      <GridItem>Item 3</GridItem>
+      <GridItem>Item 4</GridItem>
+      <GridItem>Item 5</GridItem>
+      <GridItem>Item 6</GridItem>
     </StoryContainer>
   )
 };
 
 export const AlignSelf: Story = {
   render: () => (
-    <StoryContainer>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[300] }} alignSelf="end">
-        [alignSelf=end]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100], height: '3rem' }}>
-        Default
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[300] }} alignSelf="start">
-        [alignSelf=start]
-      </StoryColumn>
+    <StoryContainer gap={4} templateColumns="repeat(5, 1fr)">
+      {(['auto', 'start', 'end', 'center', 'stretch'] as const).map((align) => (
+        <Grid gap={2} key={align}>
+          <StoryCaption align="center">{align}</StoryCaption>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              height: '10rem',
+              border: `${theme.border.width.thin} ${theme.border.style.dashed} ${theme.color.gray[200]}`,
+              padding: theme.spacing[2]
+            }}
+          >
+            <GridItem alignSelf={align} style={{ height: '4rem' }}>
+              A
+            </GridItem>
+          </div>
+        </Grid>
+      ))}
     </StoryContainer>
   )
 };
 
 export const JustifySelf: Story = {
   render: () => (
-    <StoryContainer>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[300] }} justifySelf="end">
-        [justifySelf=end]
-      </StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[100] }}>Default</StoryColumn>
-      <StoryColumn style={{ backgroundColor: theme.color.gray[300] }} justifySelf="start">
-        [justifySelf=start]
-      </StoryColumn>
+    <StoryContainer gap={4} templateColumns="repeat(5, 1fr)">
+      {(['auto', 'start', 'end', 'center', 'stretch'] as const).map((justify) => (
+        <Grid gap={2} key={justify}>
+          <StoryCaption align="center">{justify}</StoryCaption>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              border: `${theme.border.width.thin} ${theme.border.style.dashed} ${theme.color.gray[200]}`,
+              padding: theme.spacing[2]
+            }}
+          >
+            <GridItem justifySelf={justify}>A</GridItem>
+          </div>
+        </Grid>
+      ))}
     </StoryContainer>
   )
 };

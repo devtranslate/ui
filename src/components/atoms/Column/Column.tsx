@@ -8,3 +8,5 @@ export const Column: React.FC<ColumnProps> = ({ children, as = 'div', ...props }
     </ColumnStyled>
   );
 };
+
+export * from './Column.types';

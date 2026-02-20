@@ -8,3 +8,5 @@ export const Heading: React.FC<HeadingProps> = ({ children, size = 'md', ...prop
     </HeadingStyled>
   );
 };
+
+export * from './Heading.types';
