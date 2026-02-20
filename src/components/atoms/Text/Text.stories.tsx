@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { theme } from '../../../themes';
+import { Grid } from '../../molecules';
 import { Text } from './Text';
 import { TextProps } from './Text.types';
 
@@ -36,23 +38,26 @@ const meta: Meta<typeof Text> = {
 export default meta;
 type Story = StoryObj<TextProps>;
 
-const StoryContainer: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: '12px 0 24px' }}>
+const StoryContainer = ({ children }: { children: React.ReactNode }) => (
+  <Grid gap={4} style={{ padding: `${theme.spacing[3]} 0 ${theme.spacing[6]}` }}>
     {children}
-  </div>
+  </Grid>
 );
 
-const StoryCaption: React.FC<{ children: React.ReactNode; align?: TextProps['textAlign'] }> = ({
+const StoryCaption = ({
   children,
   align
+}: {
+  children: React.ReactNode;
+  align?: TextProps['textAlign'];
 }) => (
   <Text
-    size="xs"
     weight="bold"
-    color="gray[400]"
-    letterSpacing="tight"
+    color="gray[500]"
+    letterSpacing="relaxed"
     textTransform="uppercase"
     textAlign={align}
+    style={{ fontSize: 11 }}
   >
     {children}
   </Text>
@@ -82,10 +87,10 @@ export const Semantic: Story = {
     return (
       <StoryContainer>
         {tags.map((item) => (
-          <div key={item.tag}>
+          <Grid gap={1} key={item.tag}>
             <StoryCaption>{item.description}</StoryCaption>
             <Text as={item.tag}>{shortText}</Text>
-          </div>
+          </Grid>
         ))}
       </StoryContainer>
     );
@@ -106,10 +111,10 @@ export const Colors: Story = {
     return (
       <StoryContainer>
         {colors.map((color) => (
-          <div key={color}>
+          <Grid gap={1} key={color}>
             <StoryCaption>{color}</StoryCaption>
             <Text color={`${color}[600]`}>{shortText}</Text>
-          </div>
+          </Grid>
         ))}
       </StoryContainer>
     );
@@ -122,10 +127,10 @@ export const Sizes: Story = {
     return (
       <StoryContainer>
         {sizes.map((size) => (
-          <div key={size}>
+          <Grid gap={1} key={size}>
             <StoryCaption>{size}</StoryCaption>
             <Text size={size}>{shortText}</Text>
-          </div>
+          </Grid>
         ))}
       </StoryContainer>
     );
@@ -144,10 +149,10 @@ export const Weight: Story = {
     return (
       <StoryContainer>
         {weights.map((weight) => (
-          <div key={weight}>
+          <Grid gap={1} key={weight}>
             <StoryCaption>{weight}</StoryCaption>
             <Text weight={weight}>{shortText}</Text>
-          </div>
+          </Grid>
         ))}
       </StoryContainer>
     );
@@ -166,10 +171,10 @@ export const LetterSpacing: Story = {
     return (
       <StoryContainer>
         {letterSpacings.map((spacing) => (
-          <div key={spacing}>
+          <Grid gap={1} key={spacing}>
             <StoryCaption>{spacing}</StoryCaption>
             <Text letterSpacing={spacing}>{shortText}</Text>
-          </div>
+          </Grid>
         ))}
       </StoryContainer>
     );
@@ -187,10 +192,10 @@ export const TextTransform: Story = {
     return (
       <StoryContainer>
         {textTransform.map((transform) => (
-          <div key={transform}>
+          <Grid gap={1} key={transform}>
             <StoryCaption>{transform}</StoryCaption>
             <Text textTransform={transform}>{shortText}</Text>
-          </div>
+          </Grid>
         ))}
       </StoryContainer>
     );
@@ -203,10 +208,10 @@ export const TextAlign: Story = {
     return (
       <StoryContainer>
         {textAlign.map((align) => (
-          <div key={align}>
+          <Grid gap={1} key={align}>
             <StoryCaption align={align}>{align}</StoryCaption>
             <Text textAlign={align}>{shortText}</Text>
-          </div>
+          </Grid>
         ))}
       </StoryContainer>
     );

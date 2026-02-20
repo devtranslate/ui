@@ -1,0 +1,56 @@
+import { Canvas, Controls, Meta, Story } from '@storybook/addon-docs/blocks';
+import * as GridStories from './Grid.stories.tsx';
+
+<Meta of={GridStories} />
+
+# Grid
+
+The **Grid** component provides a powerful layout system using CSS Grid. It should be used when you want to arrange information differently at each breakpoint or create complex two-dimensional layouts.
+
+<Canvas>
+  <Story of={GridStories.Playground} />
+</Canvas>
+
+<Controls of={GridStories.Playground} />
+
+## Template Columns
+
+Use the **templateColumns** property to define the number and size of grid columns. It supports responsive values through breakpoint objects.
+
+<Story of={GridStories.TemplateColumns} />
+
+## Template Rows
+
+Use the **templateRows** property to define the number and size of grid rows.
+
+<Story of={GridStories.TemplateRows} />
+
+## Gap
+
+Control spacing between grid items using **gap**, **rowGap**, and **columnGap** properties.
+
+<Story of={GridStories.Gap} />
+
+## Align Items
+
+The **alignItems** property aligns grid items along the block (vertical) axis.
+
+<Story of={GridStories.AlignItems} />
+
+## Justify Items
+
+The **justifyItems** property aligns grid items along the inline (horizontal) axis.
+
+<Story of={GridStories.JustifyItems} />
+
+## Align Content
+
+The **alignContent** property aligns the entire grid along the block (vertical) axis when there's extra space.
+
+<Story of={GridStories.AlignContent} />
+
+## Justify Content
+
+The **justifyContent** property aligns the entire grid along the inline (horizontal) axis when there's extra space.
+
+<Story of={GridStories.JustifyContent} />

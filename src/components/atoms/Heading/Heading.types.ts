@@ -17,6 +17,8 @@ export type HeadingProps = {
   textAlign?: React.CSSProperties['textAlign'];
   /** Defines the heading content. */
   children?: React.ReactNode;
+  /** Inline style for the heading. */
+  style?: React.CSSProperties;
 };
 
 export type HeadingStyledProps = {

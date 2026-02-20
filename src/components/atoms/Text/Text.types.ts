@@ -23,6 +23,8 @@ export type TextProps = {
   textAlign?: React.CSSProperties['textAlign'];
   /** Defines the text content. */
   children?: React.ReactNode;
+  /** Inline style for the text. */
+  style?: React.CSSProperties;
 };
 
 export type TextStyledProps = {

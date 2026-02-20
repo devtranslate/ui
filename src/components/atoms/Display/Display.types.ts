@@ -17,6 +17,8 @@ export type DisplayProps = {
   textAlign?: React.CSSProperties['textAlign'];
   /** Defines the display content. */
   children?: React.ReactNode;
+  /** Inline style for the display. */
+  style?: React.CSSProperties;
 };
 
 export type DisplayStyledProps = {
